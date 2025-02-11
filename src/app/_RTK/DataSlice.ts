@@ -59,7 +59,7 @@ export const fetchData = createAsyncThunk(
   async (city: string) => {
     try {
       const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city},EG&limit=1&appid=${process.env.NEXT_PUBLIC_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&limit=1&appid=${process.env.NEXT_PUBLIC_KEY}`
       );
 
       return res.data;
